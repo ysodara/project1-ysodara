@@ -1,0 +1,42 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: "Quicksand", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.8;
+    position: relative;
+}
+.navbar .navbar-collapse a:hover, .active {
+        border-bottom: 2.5px solid tomato;
+        transition: all .3s ease-in-out;
+    }
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    right: 0;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+    color: none !important;
+}
+
+.nav-tabs a:hover, .nav-tabs .active {
+    border: none;
+}
+.nav-tabs {
+    margin-bottom: 15px;
+}
+
+
+
+
+

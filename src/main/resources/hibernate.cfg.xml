@@ -1,0 +1,38 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+	<!-- Connection Information -->
+	<session-factory>
+	<property name="hibernate.connection.username">expense</property>
+	<property name="hibernate.connection.password">password</property>
+	<property name="hibernate.connection.url">jdbc:postgresql://java-uta-sy.cbl5il2pac4q.us-east-2.rds.amazonaws.com:5432/expensehibernate</property>
+	<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+	<property name="hibernate.connection.dialect">org.hibernate.PostgreSQLDialect</property>
+	<property name="hibernate.show_sql">false</property>
+	<property name="hibernate.format_sql">false</property>	
+	
+	
+	<!-- Connection Pool, a method of speeding up DB calls, Hibernate will open up the number of connections specified in the tag below 
+		when it starts up
+		Every time you create a session, a session will borrow an active connection from the connection pool.
+		When close a session the connection does not close it simply frees up and makes available that connection
+		that the seesion was using
+	-->
+
+	<property name="hibernate.connection.pool_size">10</property>
+	<property name="hibernate.hbm2ddl.auto">update</property>
+	
+	 
+	<mapping class="com.example.models.ReimBStatus"/>
+	<mapping class="com.example.models.ReimBType"/>
+	<mapping class="com.example.models.UserRole"/>
+	
+	<mapping class="com.example.models.User"/>
+	<mapping class="com.example.models.Reimburstment"/>
+	
+	</session-factory>
+
+</hibernate-configuration>
